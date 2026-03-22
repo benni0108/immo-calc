@@ -1,12 +1,11 @@
-import { ReturnsSummary, DerivedValues } from '../lib/types';
+import { ReturnsSummary } from '../lib/types';
 import { eur, pct } from '../lib/format';
 
 interface Props {
   returns: ReturnsSummary[];
-  derived: DerivedValues;
 }
 
-export default function ReturnsDashboard({ returns, derived }: Props) {
+export default function ReturnsDashboard({ returns }: Props) {
   if (returns.length === 0) return null;
 
   return (

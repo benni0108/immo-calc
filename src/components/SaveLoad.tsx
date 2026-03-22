@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { SavedCalculation, PropertyInputs } from '../lib/types';
+import { SavedCalculation } from '../lib/types';
 
 interface Props {
   saved: SavedCalculation[];

@@ -114,7 +114,7 @@ export default function App() {
 
           <div className="tab-content">
             {activeTab === 'returns' && (
-              <ReturnsDashboard returns={result.returns} derived={result.derived} />
+              <ReturnsDashboard returns={result.returns} />
             )}
             {activeTab === 'charts' && <Charts schedule={result.schedule} />}
             {activeTab === 'table' && <AmortizationTable schedule={result.schedule} />}
