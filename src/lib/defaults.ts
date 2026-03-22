@@ -1,0 +1,25 @@
+import { PropertyInputs } from './types';
+
+export const DEFAULT_INPUTS: PropertyInputs = {
+  name: 'Neue Berechnung',
+  kaufpreis: 137000,
+  nebenkostenPct: 11,
+  sanierung: 5000,
+  betriebskosten: 95,
+  wlan: 15,
+  heizung: 50,
+  versicherung: 20,
+  abnutzung: 50,
+  miete: 900,
+  steuerklasse: 42,
+  abschreibungPct: 1.5,
+  grundanteilPct: 30,
+  kostensteigerungPct: 2,
+  kredithoehe: 122000,
+  dauerJahre: 30,
+  zinsenPct: 1.45,
+  mietsteigerungPct: 2.5,
+  wohnungspreissteigerungPct: 2.5,
+  aktienmarktRenditePct: 5,
+  marktkorrektur: 15000,
+};
