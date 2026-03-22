@@ -21,5 +21,5 @@ export const DEFAULT_INPUTS: PropertyInputs = {
   mietsteigerungPct: 2.5,
   wohnungspreissteigerungPct: 2.5,
   aktienmarktRenditePct: 5,
-  marktkorrektur: 15000,
+  marktkorrektur: 5000,
 };
