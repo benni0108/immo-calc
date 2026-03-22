@@ -10,7 +10,7 @@ interface FieldDef {
   label: string;
   suffix?: string;
   step?: number;
-  min?: number;
+  min?: number | null;
   max?: number;
 }
 
@@ -49,7 +49,7 @@ const growthFields: FieldDef[] = [
   { key: 'kostensteigerungPct', label: 'Kostensteigerung / Jahr', suffix: '%', step: 0.1 },
   { key: 'wohnungspreissteigerungPct', label: 'Wertsteigerung / Jahr', suffix: '%', step: 0.1 },
   { key: 'aktienmarktRenditePct', label: 'Aktienmarkt Rendite', suffix: '%', step: 0.5 },
-  { key: 'marktkorrektur', label: 'Marktkorrektur (einmalig)', suffix: '€' },
+  { key: 'marktkorrektur', label: 'Marktkorrektur (einmalig)', suffix: '€', min: null, step: 1000 },
 ];
 
 function FieldGroup({ title, fields, inputs, onChange }: {
@@ -69,7 +69,7 @@ function FieldGroup({ title, fields, inputs, onChange }: {
               id={f.key}
               type="number"
               step={f.step ?? 1}
-              min={f.min ?? 0}
+              min={f.min === null ? undefined : (f.min ?? 0)}
               max={f.max}
               value={inputs[f.key] as number}
               onChange={(e) => onChange(f.key, parseFloat(e.target.value) || 0)}

@@ -55,7 +55,7 @@ export function calculate(inputs: PropertyInputs): CalculationResult {
   let restschuld = inputs.kredithoehe;
   let jahresKosten = summeKosten * 11;
   let cashflowNettoReinvested = 0;
-  let wertImmobilie = gesamtkosten - nebenkosten - inputs.marktkorrektur;
+  let wertImmobilie = gesamtkosten - nebenkosten + inputs.marktkorrektur;
 
   const maxYears = Math.max(inputs.dauerJahre, 30);
 
